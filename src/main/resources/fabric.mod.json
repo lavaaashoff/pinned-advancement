@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "pinnedadvancement",
+  "version": "${version}",
+  "name": "Pinned Advancement",
+  "description": "Shift+click an advancement to pin it on screen with its remaining requirements.",
+  "authors": [
+    "lavaaashoff"
+  ],
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "dev.pinnedadv.PinnedAdvancement"
+    ],
+    "modmenu": [
+      "dev.pinnedadv.ModMenuIntegration"
+    ]
+  },
+  "mixins": [
+    "pinnedadvancement.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.19.0",
+    "minecraft": "~26.3",
+    "java": ">=25",
+    "fabric-api": "*"
+  },
+  "suggests": {
+    "modmenu": "*"
+  },
+  "icon": "assets/pinnedadvancement/icon.png"
+}
