@@ -26,5 +26,11 @@
   "pinnedadvancement.config.gridcols": "Grid columns: %s",
   "pinnedadvancement.config.gridrows": "Grid rows: %s",
   "pinnedadvancement.config.key.press": "press keys...",
-  "pinnedadvancement.config.key.tooltip": "Hold Ctrl/Shift/Alt and press a key. Esc removes the hotkey."
+  "pinnedadvancement.config.key.tooltip": "Hold Ctrl/Shift/Alt and press a key. Esc removes the hotkey.",
+  "pinnedadvancement.config.wide": "Wide menu",
+  "pinnedadvancement.config.wide.tooltip": "Full-screen advancement menu with search by title and description.",
+  "pinnedadvancement.config.wide.advinfo": "Unavailable: AdvancementInfo is installed and widens the menu itself.",
+  "pinnedadvancement.search.hint": "Search...",
+  "pinnedadvancement.search.tooltip": "Search by title and description.\nArrows - select, Enter - go to it, Esc - close the list.",
+  "pinnedadvancement.search.none": "Nothing found"
 }

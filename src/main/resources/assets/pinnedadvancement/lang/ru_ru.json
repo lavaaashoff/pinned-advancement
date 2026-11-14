@@ -26,5 +26,11 @@
   "pinnedadvancement.config.gridcols": "Столбцов сетки: %s",
   "pinnedadvancement.config.gridrows": "Строк сетки: %s",
   "pinnedadvancement.config.key.press": "нажмите...",
-  "pinnedadvancement.config.key.tooltip": "Зажмите Ctrl/Shift/Alt и нажмите клавишу. Esc убирает сочетание."
+  "pinnedadvancement.config.key.tooltip": "Зажмите Ctrl/Shift/Alt и нажмите клавишу. Esc убирает сочетание.",
+  "pinnedadvancement.config.wide": "Широкое меню",
+  "pinnedadvancement.config.wide.tooltip": "Меню достижений на весь экран и поиск по названию и описанию.",
+  "pinnedadvancement.config.wide.advinfo": "Недоступно: установлен AdvancementInfo, он сам расширяет меню.",
+  "pinnedadvancement.search.hint": "Поиск...",
+  "pinnedadvancement.search.tooltip": "Поиск по названию и описанию.\nСтрелки - выбрать, Enter - перейти, Esc - закрыть список.",
+  "pinnedadvancement.search.none": "Ничего не найдено"
 }

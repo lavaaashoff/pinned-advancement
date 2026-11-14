@@ -33,6 +33,8 @@ public final class Config {
 	public boolean detailed = true;
 	/** Thin percentage progress bar under the "remaining" line. */
 	public boolean progressBar = true;
+	/** Stretch the advancement screen over the whole window and add a search box. */
+	public boolean expandWindow = true;
 	/** Size of the missing-requirements grid. */
 	public int gridCols = 9, gridRows = 6;
 	/** Position of the window inside the free screen space, 0..1. */

@@ -67,6 +67,12 @@ public final class ConfigScreen extends Screen {
 		addRenderableWidget(CycleButton.onOffBuilder(c.progressBar)
 				.create(rx, y, w, 20, Component.translatable("pinnedadvancement.config.progressbar"), (b, v) -> c.progressBar = v));
 		y += step;
+		CycleButton<Boolean> wide = addRenderableWidget(CycleButton.onOffBuilder(c.expandWindow && !WideScreen.ADVANCEMENT_INFO)
+				.create(rx, y, w, 20, Component.translatable("pinnedadvancement.config.wide"), (b, v) -> c.expandWindow = v));
+		wide.setTooltip(net.minecraft.client.gui.components.Tooltip.create(Component.translatable(
+				WideScreen.ADVANCEMENT_INFO ? "pinnedadvancement.config.wide.advinfo" : "pinnedadvancement.config.wide.tooltip")));
+		wide.active = !WideScreen.ADVANCEMENT_INFO;
+		y += step;
 		keyButton = addRenderableWidget(Button.builder(keyLabel(), b -> {
 			listening = true;
 			b.setMessage(keyLabel());
@@ -80,7 +86,7 @@ public final class ConfigScreen extends Screen {
 			Config d = new Config();
 			c.width = d.width; c.scale = d.scale; c.opacity = d.opacity; c.maxLines = d.maxLines;
 			c.detailed = d.detailed; c.progressBar = d.progressBar; c.posX = d.posX; c.posY = d.posY;
-			c.gridCols = d.gridCols; c.gridRows = d.gridRows;
+			c.gridCols = d.gridCols; c.gridRows = d.gridRows; c.expandWindow = d.expandWindow;
 			rebuildWidgets();
 		}).bounds(rx, y, w, 20).build());
 		y += step;

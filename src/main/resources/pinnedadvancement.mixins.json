@@ -1,11 +1,17 @@
 {
   "required": true,
   "package": "dev.pinnedadv.mixin",
+  "plugin": "dev.pinnedadv.WideMixinPlugin",
   "compatibilityLevel": "JAVA_25",
   "client": [
     "AdvancementsScreenMixin",
+    "AdvancementsScreenWideMixin",
     "AdvancementTabAccessor",
+    "AdvancementTabTypeWideMixin",
+    "AdvancementTabWideMixin",
+    "AdvancementWidgetAccessor",
     "AdvancementWidgetMixin",
+    "AdvancementWidgetWideMixin",
     "ClientAdvancementsMixin",
     "KeyboardHandlerMixin"
   ],

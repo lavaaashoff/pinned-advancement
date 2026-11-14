@@ -76,6 +76,7 @@ public final class PinnedAdvancement implements ClientModInitializer {
 				boolean pin = e.button() == InputConstants.MOUSE_BUTTON_LEFT && e.hasShiftDown();
 				boolean list = e.button() == InputConstants.MOUSE_BUTTON_RIGHT;
 				if (!pin && !list) return true;
+				if (WideScreen.overDropdown(e.x(), e.y())) return true;
 				AdvancementTab tab = ((AdvancementsScreenMixin) s).pinnedadv$getSelectedTab();
 				if (tab == null) return true;
 				AdvancementWidget hovered = ((AdvancementTabAccessor) tab).pinnedadv$getHovered();
