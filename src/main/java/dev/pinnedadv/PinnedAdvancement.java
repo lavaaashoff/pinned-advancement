@@ -55,6 +55,22 @@ public final class PinnedAdvancement implements ClientModInitializer {
 		return true;
 	}
 
+	/** Ctrl+C over a hovered advancement in the menu copies its identifier (e.g. "minecraft:story/root"). */
+	public static boolean onCopyKey(int action, net.minecraft.client.input.KeyEvent e) {
+		if (e.key() != 6 /* SDL scancode for C */) return false; // not C
+		if (!e.hasControlDown() || e.hasShiftDown() || e.hasAltDown()) return false;
+		Minecraft mc = Minecraft.getInstance();
+		net.minecraft.client.gui.screens.Screen screen = mc.gui.screen();
+		if (!(screen instanceof AdvancementsScreen)) return false;
+		if (screen.getFocused() instanceof net.minecraft.client.gui.components.EditBox) return false;
+		AdvancementTab tab = ((AdvancementsScreenMixin) screen).pinnedadv$getSelectedTab();
+		if (tab == null) return false;
+		AdvancementWidget hovered = ((AdvancementTabAccessor) tab).pinnedadv$getHovered();
+		if (hovered == null) return false;
+		if (action == 1) mc.keyboardHandler.setClipboard(hovered.getAdvancement().id().toString()); // press only, not repeats/release
+		return true;
+	}
+
 	@Override
 	public void onInitializeClient() {
 		Config.load();

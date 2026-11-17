@@ -29,6 +29,7 @@ Client-side Fabric mod. Works in singleplayer and on servers, including datapack
 | 🖥️ **Wide advancements menu** | The advancements menu fills the screen instead of the small vanilla window. Can be turned off in settings. |
 | 🔍 **Search** | A search box in the menu's title bar looks through titles and descriptions of all tabs. Everything that doesn't match is dimmed, and a dropdown lists the results — click one or use the arrow keys to jump to its tab and center it. |
 | ⌨️ **Show / hide hotkey** | Any combination of <kbd>Ctrl</kbd> / <kbd>Shift</kbd> / <kbd>Alt</kbd> + key. Bound to the physical key, so it works with any keyboard layout. |
+| 📋 **Copy ID** | <kbd>Ctrl</kbd> + <kbd>C</kbd> while hovering an advancement in the menu copies its identifier (e.g. `minecraft:story/root`) to the clipboard. |
 | ⚙️ **Settings** | Window width, scale, background opacity, number of requirement lines, grid size, detailed / compact mode, progress bar on/off, wide menu on/off, and window position — drag it anywhere, it snaps to edges and center. |
 
 ## 🎮 Controls
@@ -37,6 +38,7 @@ Client-side Fabric mod. Works in singleplayer and on servers, including datapack
 |---|---|---|
 | Advancements menu | <kbd>Shift</kbd> + <kbd>LMB</kbd> | Pin / unpin |
 | Advancements menu | <kbd>RMB</kbd> | Open the missing requirements grid |
+| Advancements menu | <kbd>Ctrl</kbd> + <kbd>C</kbd> (hovering an advancement) | Copy its identifier to the clipboard |
 | Advancements menu | type in the search box | Search; <kbd>↑</kbd> <kbd>↓</kbd> pick a result, <kbd>Enter</kbd> / <kbd>Esc</kbd> close the list |
 | Advancements menu | <kbd>Enter</kbd> (search box not focused) | Next result, <kbd>Shift</kbd> + <kbd>Enter</kbd> previous |
 | Grid | <kbd>‹</kbd> <kbd>›</kbd> or mouse wheel | Change page |
@@ -45,7 +47,7 @@ Client-side Fabric mod. Works in singleplayer and on servers, including datapack
 ## 📦 Installation
 
 1. Install [Fabric Loader](https://fabricmc.net/use/) **0.19+** for Minecraft **26.3**.
-2. Put [Fabric API](https://modrinth.com/mod/fabric-api) and `pinned-advancement-1.1.0.jar` into your `mods` folder.
+2. Put [Fabric API](https://modrinth.com/mod/fabric-api) and `pinned-advancement-1.2.0.jar` into your `mods` folder.
 3. *Optional:* [Mod Menu](https://modrinth.com/mod/modmenu) — to open the settings screen.
 
 Settings and pins are stored in `config/pinnedadvancement.json`.
@@ -58,7 +60,7 @@ Requires **JDK 25**.
 ./gradlew jar
 ```
 
-The jar is written to `build/libs/pinned-advancement-1.1.0.jar`.
+The jar is written to `build/libs/pinned-advancement-1.2.0.jar`.
 Mod Menu is a compile-only dependency from the [TerraformersMC maven](https://maven.terraformersmc.com/) and is not bundled.
 
 ## 🗂️ Project layout
